@@ -1,3 +1,13 @@
-<p>
-  header works!
-</p>
+<ion-toolbar>
+  <ion-buttons slot="start">
+    <!-- Sirve para regresar, pero hay que agregar la propiedad slot "start o end" -->
+    <ion-back-button></ion-back-button>
+  </ion-buttons>
+  <ion-titel>
+    {{pageTitle}}
+  </ion-titel>
+  <img src="./assets/carpincho.png" alt="logo-principal" id="logo-principal">
+</ion-toolbar>
+
+<!-- para que se vea el componente debe ser importado y exportado en el "header.component.ts" -->
+
