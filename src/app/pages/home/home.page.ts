@@ -10,6 +10,7 @@ export class HomePage {
 
   // eslint-disable-next-line @typescript-eslint/ban-types
   pageTitle: String = 'Home';
+  listadoUser = 'any';
 
   //posterior a la importación se debe agregar al constructor, porque hay que crear un metodo que nos permita listar
   constructor(private userService: UserService) {
@@ -21,6 +22,7 @@ export class HomePage {
     this.userService.obtenerListadoUsuarios()
     .then(respuesta =>{
       console.log(respuesta);
+      this.listadoUser = respuesta.data;
     },
     (error) =>{
       console.error(error);
